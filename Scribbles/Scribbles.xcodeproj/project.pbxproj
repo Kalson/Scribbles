@@ -19,6 +19,8 @@
 		2631882C198FBF3800D11111 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26318814198FBF3800D11111 /* UIKit.framework */; };
 		26318834198FBF3800D11111 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26318832198FBF3800D11111 /* InfoPlist.strings */; };
 		26318836198FBF3800D11111 /* ScribblesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26318835198FBF3800D11111 /* ScribblesTests.m */; };
+		26318842198FBFAD00D11111 /* SCRDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26318841198FBFAD00D11111 /* SCRDrawViewController.m */; };
+		26318846198FC00C00D11111 /* SCRDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26318845198FC00C00D11111 /* SCRDrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		26318831198FBF3800D11111 /* ScribblesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScribblesTests-Info.plist"; sourceTree = "<group>"; };
 		26318833198FBF3800D11111 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		26318835198FBF3800D11111 /* ScribblesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribblesTests.m; sourceTree = "<group>"; };
+		26318840198FBFAD00D11111 /* SCRDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRDrawViewController.h; sourceTree = "<group>"; };
+		26318841198FBFAD00D11111 /* SCRDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRDrawViewController.m; sourceTree = "<group>"; };
+		26318844198FC00C00D11111 /* SCRDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRDrawView.h; sourceTree = "<group>"; };
+		26318845198FC00C00D11111 /* SCRDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRDrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		26318804198FBF3800D11111 = {
 			isa = PBXGroup;
 			children = (
+				2631883F198FBF9100D11111 /* Controllers */,
 				26318816198FBF3800D11111 /* Scribbles */,
 				2631882F198FBF3800D11111 /* ScribblesTests */,
 				2631880F198FBF3800D11111 /* Frameworks */,
@@ -142,6 +149,25 @@
 				26318832198FBF3800D11111 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2631883F198FBF9100D11111 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				26318840198FBFAD00D11111 /* SCRDrawViewController.h */,
+				26318841198FBFAD00D11111 /* SCRDrawViewController.m */,
+				26318843198FBFD200D11111 /* Draw Views */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		26318843198FBFD200D11111 /* Draw Views */ = {
+			isa = PBXGroup;
+			children = (
+				26318844198FC00C00D11111 /* SCRDrawView.h */,
+				26318845198FC00C00D11111 /* SCRDrawView.m */,
+			);
+			name = "Draw Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2631881D198FBF3800D11111 /* main.m in Sources */,
+				26318846198FC00C00D11111 /* SCRDrawView.m in Sources */,
+				26318842198FBFAD00D11111 /* SCRDrawViewController.m in Sources */,
 				26318821198FBF3800D11111 /* SCRAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +466,7 @@
 				2631883B198FBF3800D11111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2631883C198FBF3800D11111 /* Build configuration list for PBXNativeTarget "ScribblesTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +475,7 @@
 				2631883E198FBF3800D11111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
