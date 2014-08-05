@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260298F91990433C0085886F /* SCRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260298F81990433C0085886F /* SCRScrollView.m */; };
 		26318811198FBF3800D11111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26318810198FBF3800D11111 /* Foundation.framework */; };
 		26318813198FBF3800D11111 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26318812198FBF3800D11111 /* CoreGraphics.framework */; };
 		26318815198FBF3800D11111 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26318814198FBF3800D11111 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260298F71990433C0085886F /* SCRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRScrollView.h; sourceTree = "<group>"; };
+		260298F81990433C0085886F /* SCRScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRScrollView.m; sourceTree = "<group>"; };
 		2631880D198FBF3800D11111 /* Scribbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26318810198FBF3800D11111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		26318812198FBF3800D11111 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +159,8 @@
 			children = (
 				26318840198FBFAD00D11111 /* SCRDrawViewController.h */,
 				26318841198FBFAD00D11111 /* SCRDrawViewController.m */,
+				260298F71990433C0085886F /* SCRScrollView.h */,
+				260298F81990433C0085886F /* SCRScrollView.m */,
 				26318843198FBFD200D11111 /* Draw Views */,
 			);
 			name = Controllers;
@@ -268,6 +273,7 @@
 			files = (
 				2631881D198FBF3800D11111 /* main.m in Sources */,
 				26318846198FC00C00D11111 /* SCRDrawView.m in Sources */,
+				260298F91990433C0085886F /* SCRScrollView.m in Sources */,
 				26318842198FBFAD00D11111 /* SCRDrawViewController.m in Sources */,
 				26318821198FBF3800D11111 /* SCRAppDelegate.m in Sources */,
 			);

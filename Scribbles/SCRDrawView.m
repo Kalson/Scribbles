@@ -22,6 +22,7 @@
         // alloc/init the line color
         self.lineColor = [UIColor darkGrayColor];
         
+        self.lineWidth = 1;
         self.backgroundColor = [UIColor whiteColor];
     }
     return self;
@@ -97,24 +98,48 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    // changing the width
-    int random = arc4random_uniform(20) + 5;
-    
+//    // changing the width
+//    int random = arc4random_uniform(20) + 5;
+//    
     self.currentscribble = [@{
                               @"color":self.lineColor,
                               @"points":[@[]mutableCopy],
-                              @"width":@(random)
+                              @"width":@(self.lineWidth)
                               }mutableCopy];
     
     // adding current scribble to the array of scribble
     [self.scribbles addObject:self.currentscribble];
     
-    [self scribbleWithTouches:touches];
+    if (self.isScribbleMode)
+    {
+        // this is for scribble
+        [self scribbleWithTouches:touches];
+    }
+    else
+    {
+        // this is for the lines
+        UITouch *touch = [touches allObjects][0];
+        CGPoint location = [touch locationInView:self];
+        self.currentscribble[@"points"][0] = [NSValue valueWithCGPoint:location];
+        [self setNeedsDisplay];
+    }
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self scribbleWithTouches:touches];
+    if (self.isScribbleMode)
+    {
+        // this is for scribble
+        [self scribbleWithTouches:touches];
+    }
+    else
+    {
+        // this is for the lines
+        UITouch *touch = [touches allObjects][0];
+        CGPoint location = [touch locationInView:self];
+        self.currentscribble[@"points"][1] = [NSValue valueWithCGPoint:location];
+        [self setNeedsDisplay];
+    }
 }
 
 - (void)scribbleWithTouches:(NSSet *)touches

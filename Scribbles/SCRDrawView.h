@@ -15,6 +15,7 @@
 @property (nonatomic) NSMutableDictionary *currentscribble;
 
 @property (nonatomic) UIColor *lineColor;
+@property (nonatomic) int lineWidth;
 
-
+@property (nonatomic) BOOL isScribbleMode;
 @end
